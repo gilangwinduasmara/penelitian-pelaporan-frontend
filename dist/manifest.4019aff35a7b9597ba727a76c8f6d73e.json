@@ -1,0 +1,43 @@
+{
+  "icons": [
+    {
+      "src": "assets/icons/icon_512x512.c1be2691ccd25c77be5e745a1a76d75d.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_384x384.4840e5ad7b98f928519365cc461a965b.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_256x256.522a3871c2ae84c3e4791bce889f33d4.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_192x192.b1c37447171022ebfbe9dab8bca82dad.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_128x128.eb22dfd3201135581cac0ca8538bdebb.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon_96x96.9d231eb563968d3217a0fadfa46012ec.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Pelaporan - SOS",
+  "short_name": "pelaporan",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Pelaporan",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "theme-color": "#ffffff"
+}
