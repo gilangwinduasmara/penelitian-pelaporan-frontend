@@ -61,13 +61,13 @@ module.exports = {
       name: 'Pelaporan - SOS',
       short_name: 'pelaporan',
       description: 'Pelaporan',
-      background_color: '#01579b',
-      theme_color: '#01579b',
-      'theme-color': '#01579b',
+      background_color: '#ffffff',
+      theme_color: '#ffffff',
+      'theme-color': '#ffffff',
       start_url: '/',
       icons: [
         {
-          src: path.resolve('src/public/assets/media/logos/logo-1.png'),
+          src: path.resolve('src/public/assets/media/logos/logo-letter-1.png'),
           sizes: [96, 128, 192, 256, 384, 512],
           destination: path.join('assets', 'icons')
         }
