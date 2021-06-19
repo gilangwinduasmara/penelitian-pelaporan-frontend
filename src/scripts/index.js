@@ -37,7 +37,7 @@ if (navigator.geolocation) {
 $('#button__submit').click(function(){
     const button = $(this)
     button.attr('disabled', 'true')
-    axios.post('http://localhost:8000/api/pelaporan-sos', $('form').serialize()).then((res) => {
+    axios.post('http://152.70.96.84:8080/api/pelaporan-sos', $('form').serialize()).then((res) => {
         console.log(JSON.stringify(res.data))
         if(res.data.success){
             window.location.href = '?kode='+res.data.kode
