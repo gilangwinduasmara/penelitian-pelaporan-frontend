@@ -1,0 +1,360 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+body{
+    background: #EDE7F6;
+}
+
+main{
+    z-index: 5;
+    background-color: white;
+    position: relative;
+    min-height: 90vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+header{
+    position: fixed;
+    top: 4;
+    width: 100%;
+    z-index: 6;
+}
+.header__title{
+    color: white;
+}
+
+img {
+    display: block;
+}
+#drawer {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 1;
+    transform: translate(-250px, 0);
+    transition: transform 0.3s ease-in-out;
+    background-color:#ff7b54;
+    z-index: 7;
+}
+#drawer.open {
+    transform: translate(0,0)
+}
+.jumbotron{
+    max-width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    color: white;
+    /* border: 1px dashed; */
+    display: flex;
+    align-items: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .1);
+    pointer-events: none;
+}
+.backdrop{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    display: none;
+    top: 1;
+    z-index: -6;
+}
+.restaurant__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+    overflow: hidden;
+
+}
+.restaurant__box:hover > .restaurant__image > img{
+    transform: scale(1.5);
+}   
+
+.restaurant__image{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+.restaurant__title{
+    font-weight: bold;
+}
+.restaurant__details{
+    background: white;
+    width: 100%;
+    /* min-height: 25%; */
+    padding: 24px;
+    color: black;
+}
+.restaurant__description{
+    color: rgb(63, 63, 63);
+    margin-top: 24px;
+    text-align: justify;
+}
+.restaurant__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s;
+
+}
+#restaurants{
+    background: #EDE7F6;
+}
+#restaurant{
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 16px;
+}
+
+
+.jumbotron__content{
+    padding: 24px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    /* position: fixed; */
+}
+
+.jumbotron__img {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.jumbotron__content{
+    z-index: 2;
+}
+.restaurant__info{
+    display: flex;
+    justify-content: space-between;
+}
+.box__top-menu > ul{
+    display: flex;
+    align-items: center;
+}
+a{
+    color: white;
+}
+ul li {
+    list-style-type: none;
+    display: inline;
+}
+ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 16px;
+}
+
+header.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.wrapper div{
+    padding: 12px 32px;
+    /* border: 1px dashed black; */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.box__top-menu {
+    display: none;
+} 
+
+.section__title{
+    margin: 16px;
+    margin-top: 24px;
+    font-size: 2em;
+}
+
+#hamburger{
+    padding: 12px;
+}
+
+div.box__hamburger {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+} 
+div.box__hamburger>a{
+    font-size: 24px;
+    text-decoration: none;
+}
+div.box__hamburger>a:visited{
+    color: white;
+}
+footer{
+    background-color: white;
+    padding: 24px;
+    font-weight: bolder;
+}
+@media screen and (min-width: 300px) {
+    #restaurant{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 764px) {
+    
+    #restaurant{
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    } 
+}
+@media screen and (min-width: 1125px) {
+    #restaurant{
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+    } 
+}
+@media screen and (max-width: 600px) {
+    div.box__top-menu{
+        display: none;
+    }
+    div.box__hamburger {
+        display: flex;
+    }
+}
+
+
+
+.button__add_to_favorite{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 24px
+}
+
+.button-primary{
+    background: none;
+    background-color: #ff7b54;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.button-primary:hover{
+    background-color: #fda185;
+}
+
+.restaurant__detail_image{
+    position: relative;
+}
+
+.restaurant__detail_image > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.restaurant__detail_wrapper{
+    padding: 24px;
+}
+
+.restaurant__detail_info {
+    display: flex;
+    justify-content: space-between;
+}
+.restaurant__detail_description{
+    margin-top: 12px;
+    letter-spacing: .03em;
+    line-height: 24px;
+}
+.restaurant__detail_city{
+    font-weight: bold;
+}
+.restaurant__detail_address{
+    color: rgb(0, 0, 0, .4);
+}
+
+.restaurant__detail_categories{
+    min-width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;   
+    margin-top: 4px;
+}
+.restaurant__detail_menus{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+}
+.restaurant__detail_menus > div{
+    text-align: center;
+}
+.restaurant__detail_menus_item > .pill{
+    margin-top: 4px;
+}
+.pill{
+    background-color: #fda185;
+    text-align: center;
+    padding: 4px;
+    color: rgb(0, 0, 0, 0.4);   
+    border-radius: 12px;
+}
+.review-container{
+    padding: 8px;
+    border-bottom: rgb(0, 0, 0, 0.2) 1px solid ;
+}
+.review__date{
+    font-size: 12px;
+    color: rgb(0, 0, 0, 0.4);   
+}
+.review__customer_review{
+    margin-top: 8px
+}
+.form-container{
+    display: block;
+}
+input.form-control, textarea {
+    width: 100%;
+    padding: 4px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input, textarea:focus{
+    outline-color: #ff7b54;
+}
