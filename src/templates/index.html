@@ -13,14 +13,16 @@
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <!-- <link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" /> -->
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="assets/media/sihelper2.png" />
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIFOcqdE1TcvPXxKpGHDeo3lOAjjREDnQ&libraries=places"></script>
+    <script src="https://unpkg.com/location-picker/dist/location-picker.min.js"></script>
     <!-- <link rel="stylesheet" href="/src/scripts/app.js"> -->
 </head>
 <body id="kt_body"
     class="quick-panel-right demo-panel-right offcanvas-right header-fixed header-mobile-fixed aside-enabled aside-static page-loading">
     <div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
         <a href="index.html">
-            <img alt="Logo" src="assets/media/logos/logo-letter-1.png" class="logo-default max-h-30px" />
+            <img alt="Logo" src="assets/media/sihelper2.png" class="logo-default max-h-30px" />
         </a>
         <div class="d-flex align-items-center">
             <div class="topbar-item mr-4" data-toggle="dropdown" data-offset="10px,0px">
@@ -52,7 +54,7 @@
                                 </span>
                             </button>
                             <a href="index.html">
-                                <img alt="Logo" src="assets/media/logos/logo-letter-1.png"
+                                <img alt="Logo" src="assets/media/sihelper2.png"
                                     class="logo-sticky max-h-35px" />
                             </a>
                         </div>
@@ -105,13 +107,19 @@
                                                     <textarea type="text" class="form-control" name="keterangan"></textarea>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">Lokasi Kejadian</label>
+                                                    <label for="">Alamat Kejadian</label>
                                                     <textarea type="text" class="form-control" name="lokasi_kejadian"></textarea>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label for="">Lokasi Kejadian <button class="btn btn-sm btn-primary" type="button" id="button__use_current_location">Gunakan lokasi sekarang</button></label>
+                                                    <div id="lokasi_kejadian" style="width: 100%; height: 400px"></div>
                                                     <input type="text" class="form-control" name="lokasi_long" hidden>
                                                     <input type="text" class="form-control" name="lokasi_lat" hidden>
                                                 </div>
+                                                <!-- <div class="form-group">
+                                                    <input type="text" class="form-control" name="lokasi_long" hidden>
+                                                    <input type="text" class="form-control" name="lokasi_lat" hidden>
+                                                </div> -->
                                             </form>
                                         </div>
                                     </div>

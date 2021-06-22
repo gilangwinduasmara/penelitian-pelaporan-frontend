@@ -1,6 +1,7 @@
 import axios from 'axios';
 import 'regenerator-runtime'; 
 import Validator from './utils/form-validator';
+import MapPicker from './utils/maps';
 import { getUrlParams } from './utils/query-parser';
 
 if ('serviceWorker' in navigator) {
@@ -20,7 +21,16 @@ $('form').on('submit', function(event){
 $('.topbar-item > a').click(function(){
     window.location.href = $(this).attr('href')
 })
-
+const lokasiKejadian = new MapPicker(document.getElementById('lokasi_kejadian'));
+google.maps.event.addListener(lokasiKejadian.map, 'idle', function (event) {
+    var location = lokasiKejadian.getCenter();
+    $('[name="lokasi_lat"]').val(location.lat)
+    $('[name="lokasi_long"]').val(location.lng)
+});
+$('#button__use_current_location').click(function(event){
+    event.preventDefault();
+    lokasiKejadian.setCurrentPosition();
+})
 Validator.init()
 
 if (navigator.geolocation) {

@@ -358,3 +358,15 @@ input.form-control, textarea {
 input, textarea:focus{
     outline-color: #ff7b54;
 }
+.pac-input{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    /* right: 50%; */
+    z-index: 1;
+    margin-left: -14px;
+    margin-top: -43px;
+    height: 44px;
+    width: 38%;
+    cursor: pointer;
+}
